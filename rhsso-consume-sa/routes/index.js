@@ -35,6 +35,8 @@ router.get('/login', function(req, res, next) {
 
   if(!access_token){
     getToken(res)
+  }else{
+    res.send("ya esta logueado")
   }
 
 });
