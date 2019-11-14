@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class HelloController {
 
+  @GetMapping("/insecure")
+  public String insecure(){
+    return "Hi, i dont have security";
+  }
 
   @GetMapping("/resource")
   public Hello getHello(@RequestParam(value = "nombre",required = false) String nombre){
